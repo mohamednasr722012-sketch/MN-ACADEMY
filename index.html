@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MN ACADEMY — تعلّم بذكاء</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav glass">
+  <div class="brand">MN <span>ACADEMY</span></div>
+  <nav>
+    <a href="#subjects">المواد</a>
+    <a href="#ai">MN AI</a>
+    <a href="#features">المميزات</a>
+    <a href="#faq">الأسئلة الشائعة</a>
+  </nav>
+  <div class="nav-actions" id="authArea"></div>
+</header>
+
+<section class="hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <p class="eyebrow">للصف الثالث الإعدادي في مصر</p>
+  <h1>تعلّم بذكاء.. <span class="grad">تفوّق بثقة</span></h1>
+  <p class="lead">منصة تعليمية تجمع المادة والشرح والتدريب، ومدرس ذكي يحل معك الأسئلة خطوة بخطوة ويحلل صور واجباتك.</p>
+  <div class="hero-cta">
+    <a href="#ai" class="btn primary">جرّب MN AI الآن</a>
+    <a href="#subjects" class="btn ghost">استكشف المواد</a>
+  </div>
+  <div class="stats glass">
+    <div><strong>5</strong><span>مواد دراسية</span></div>
+    <div><strong>24/7</strong><span>مدرس ذكي</span></div>
+    <div><strong>تحليل</strong><span>صور الواجبات</span></div>
+  </div>
+</section>
+
+<section id="subjects" class="section">
+  <h2>المواد الدراسية</h2>
+  <div class="grid">
+    <article class="card glass"><h3>اللغة العربية</h3><p>نحو وبلاغة وأدب ونصوص.</p></article>
+    <article class="card glass"><h3>اللغة الإنجليزية</h3><p>Grammar, vocabulary and reading.</p></article>
+    <article class="card glass"><h3>الرياضيات</h3><p>جبر وهندسة وإحصاء خطوة بخطوة.</p></article>
+    <article class="card glass"><h3>العلوم</h3><p>فيزياء وكيمياء وأحياء.</p></article>
+    <article class="card glass"><h3>الدراسات الاجتماعية</h3><p>تاريخ وجغرافيا وتربية وطنية.</p></article>
+  </div>
+  <p class="note">ملاحظة: المكتبة الكاملة للمناهج تنتظر الكتب الرسمية المعتمدة. المحتوى هنا إرشادي فقط.</p>
+</section>
+
+<section id="ai" class="section">
+  <h2>MN AI — المدرس الذكي</h2>
+  <div class="chat-wrap glass">
+    <div class="chat-head">
+      <span class="status" id="status">متصل</span>
+      <button class="btn small ghost" id="newChat">محادثة جديدة</button>
+    </div>
+    <div id="convList" class="conv-list" hidden></div>
+    <div id="messages" class="messages">
+      <div class="msg bot">أهلًا بك! اكتب سؤالك، أو ارفع صورة السؤال أو الواجب.</div>
+    </div>
+    <div class="preview" id="preview" hidden>
+      <img id="previewImg" alt="معاينة"><button id="removeImg" class="btn small ghost">إزالة</button>
+    </div>
+    <form id="form" class="composer">
+      <label class="btn small ghost upload" title="صورة jpg/png/webp حتى 5 ميجابايت">
+        📎<input type="file" id="file" accept="image/jpeg,image/png,image/webp" hidden>
+      </label>
+      <textarea id="input" rows="1" maxlength="4000" placeholder="اكتب سؤالك هنا..."></textarea>
+      <button class="btn primary" id="send" type="submit">إرسال</button>
+    </form>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <h2>المميزات</h2>
+  <div class="grid">
+    <article class="card glass"><h3>حل خطوة بخطوة</h3><p>شرح سبب كل خطوة حتى تفهم، لا أن تحفظ.</p></article>
+    <article class="card glass"><h3>تحليل الصور</h3><p>ارفع صورة السؤال وسيستخرج المدرس المطلوب.</p></article>
+    <article class="card glass"><h3>تبسيط الدروس</h3><p>شرح أسهل للدروس الصعبة بأمثلة قريبة منك.</p></article>
+    <article class="card glass"><h3>أمان بياناتك</h3><p>مفتاح الذكاء الاصطناعي على الخادم فقط.</p></article>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <h2>الأسئلة الشائعة</h2>
+  <details class="glass"><summary>هل المحتوى هو المنهج الرسمي؟</summary><p>لا، المحتوى التجريبي مختلف عن المنهج المعتمد، ويجب مراجعة كتب الوزارة.</p></details>
+  <details class="glass"><summary>هل يحل المدرس الذكي الواجب بدلًا عني؟</summary><p>يشرح الخطوات والسبب، والهدف أن تتعلم وتتدرب.</p></details>
+</section>
+
+<section id="dashboard" class="section" hidden>
+  <h2>لوحة الطالب</h2>
+  <div class="welcome glass"><p id="welcomeText"></p></div>
+  <div class="grid">
+    <div class="card glass"><h3 id="statConv">0</h3><p>محادثات محفوظة</p></div>
+    <div class="card glass"><h3 id="statQ">0</h3><p>أسئلة سألتها لـ MN AI</p></div>
+    <div class="card glass"><h3>—</h3><p>نسبة تقدم المنهج (تتفعل مع الدروس)</p></div>
+    <div class="card glass"><h3>—</h3><p>الاختبارات المكتملة (تتفعل لاحقًا)</p></div>
+  </div>
+  <h3 class="sub">آخر المحادثات</h3>
+  <div id="recentConv" class="conv-list" style="max-height:none"></div>
+</section>
+
+<footer class="footer glass">
+  <div class="brand">MN <span>ACADEMY</span></div>
+  <p>تعلّم بذكاء.. تفوّق بثقة</p>
+  <p class="small">© 2026 MN ACADEMY</p>
+</footer>
+
+<div id="authModal" class="modal" hidden>
+  <form id="authForm" class="modal-box glass">
+    <h3 id="authTitle"></h3>
+    <input id="authName" placeholder="الاسم الكامل" maxlength="80" hidden>
+    <input id="authEmail" type="email" placeholder="البريد الإلكتروني" required maxlength="120" autocomplete="email">
+    <input id="authPass" type="password" placeholder="كلمة السر (8 حروف على الأقل)" required minlength="8" maxlength="128" autocomplete="current-password">
+    <p id="authError" class="error"></p>
+    <button id="authSubmit" class="btn primary" type="submit"></button>
+    <button id="authSwitch" type="button" class="btn small ghost"></button>
+    <button id="authClose" type="button" class="btn small ghost">إغلاق</button>
+  </form>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
